@@ -1,0 +1,29 @@
+﻿  
+
+ <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><font color="black"> <b>UBER</b> </font><font color="Green">EATS </font></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#!Home">Home</a> </li>
+                <li><a href="#!Search"><span class="glyphicon glyphicon-search"></span> Search</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav" ng-hide="!currentUser">
+                <li><a href="#!Profile" class="text-right text-danger"><span class="glyphicon glyphicon-edit"></span>Update Profile</a></li>
+                <li><a href="#!Checkout" class="text-right text-danger"><span class="glyphicon glyphicon-shopping-cart">Shopping Cart</span></a></li>
+                <li><a href="#!MyOrder" class="text-right text-danger"><span class="glyphicon dropdown-menu">View My Orders</span></a></li>
+            </ul>
+
+
+            <ul class="nav navbar-nav navbar-right" ng-show="!currentUser">
+                <li><a href="#!Add" class="text-right text-danger"><span class="glyphicon glyphicon-user"></span>Register</a></li>
+                <li><a href="#!Login" class="text-right text-danger"><span class="glyphicon glyphicon-log-in"></span>SignIn</a></li>
+                <li><a href="#!Admin" class="text-right text-danger"><span class="glyphicon glyphicon-dashboard"></span>Admin Login</a></li>
+
+            </ul>
+        </div>
+    </nav>
+
+

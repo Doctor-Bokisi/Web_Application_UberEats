@@ -1,0 +1,138 @@
+﻿<nav class="navbar navbar-default"  ng-app="SignIn" ng-controller="McDController">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><font color="black"> <b>UBER</b> </font><font color="Green">EATS </font></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#!Home">Home</a> </li>
+           <li><a href="#!Checkout"><span class="glyphicon glyphicon-shopping-cart"></span>: {{myItems.length}}</a></li>
+        </ul>        
+    </div>
+</nav>
+
+<div style="background-color:gray " class="jumbotron text-center">
+    <h1>Mc Donalds</h1>
+        <img align="right"  src="../images/mcdonalds_logo_2465.gif" class="pull-left" width="300" height="99"/>   
+</div>
+
+<br />
+<br />
+<br />
+
+<h2 class="text-center text-danger">Products</h2>
+<br />
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <!--<th>Image</th>-->
+            <th>ID</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Transactions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="prod in Product">
+            <!--<td><img style="width:100px; height:100px" ng-src="{{'data:image/jpg;base64,'+prod.prod_Image}}" class="img-rounded" /></td>-->
+            <th>{{prod.Prod_Id}}</th>
+            <td>{{ prod.Prod_Name }}</td>
+            <td>{{ prod.Prod_Price | currency : "R" }}</td>
+            <td>
+                <button ng-click="addItem(prod)" class="btn btn-danger btn-info">
+                    Add to cart
+                    <i class="fa fa-shopping-cart"></i>
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--//============================================================================================================================-->
+<!--<div class="container">
+    <h2>Products</h2>
+    <div class="row">
+        <div class="col-xs-7 col-md-8 col-lg-8 col-sm-8">
+            <div class="row">
+                <div class="col-xs-6 col-md-6 col-sm-6 col-lg-6" ng-repeat="prod in Product">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">{{prod.Prod_Name}}</div>
+                        <div class="panel-body">
+                            <label>Product Id    : {{prod.Prod_Id}}</label>
+                            <br />
+                            <label>Product Desc  : {{prod.Prod_Description}}</label>
+                            <br />
+                            <label>Product Price : {{prod.Prod_Price | currency : "R"}}</label>
+                            <br />
+                            <br />
+                            <button ng-click="addItem(prod)" class="btn btn-danger btn-info">
+                                Add to cart
+                                <i class="fa fa-shopping-cart"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-5 col-md-4 col-lg-4 col-sm-4">
+
+        </div>
+    </div>
+</div>-->
+ <!--///==========================================================================================================================-->
+                    <!--<div class="col-md-6">
+                        <h2>My Shopping Cart</h2>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Product Name</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                </tr>
+                            </thead>
+                            <tbody id="ok">
+                                <tr ng-repeat="myItem in myItems">
+                                    <td>{{ myItem.Prod_Id }}</td>
+                                    <td>{{ myItem.Prod_Name }}</td>
+                                    <td>{{ myItem.Prod_Price | currency : "R" }}</td>
+                                    <td>{{ myItem.count }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <span class="text-center" ng-show="myItems.length == 0">
+                            Your shopping cart is empty.
+                        </span>
+
+                        <div class="clearfix"></div>
+                        <span class="pull-right alert alert-success">Total Price:{{ !totalPrice ? "0" : totalPrice | currency : "R" }}</span>
+                        <button ng-click="removeBasket()" ng-show="myItems.length > 0" class="pull-left alert alert-danger">Empty your cart</button>
+                    </div>
+                        </div>
+<div class="text-left">
+    <a href="#!Checkout" class="btn btn-danger" ng-show="myItems.length > 0">Checkout</a>
+</div>-->
+
+    
+
+    
+

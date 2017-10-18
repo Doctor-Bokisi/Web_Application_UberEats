@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html ng-app="SignIn">
+<head>
+    <meta charset="utf-8" />
+
+
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/angular.min.js"></script>
+    <script src="../Scripts/angular-route.js"></script>
+    <script src="../Scripts/jquery-1.9.1.js"></script>
+    <script src="../Scripts/bootstrap.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="../Services.js"></script>
+    <script src="../Demo.js"></script>
+
+
+</head>
+<body ng-controller="PicController">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><font color="black"> <b>UBER</b> </font><font color="Green">EATS </font></a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#!Home">Home</a> </li>
+                <li><a href="#!Dash"><span class="glyphicon glyphicon-dashboard"></span> DashBoard</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="panel panel-info">
+            <div class="panel-body">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                        <tr>
+                            <td> Title </td>
+                            <td> Image </td>
+                            <td> Size </td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="image in imagesrc track by $index">
+                            <td>{{image.Name}}</td>
+                            <td>
+                                <img ng-src="{{image.Src}}" title="{{image.Title}}" style="width:300px; height:300px" />
+                            </td>
+                            <td>{{image.Size}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="row">
+                    <div class="col-lg-7">
+                        <input type="file" multiple ng-files="GetImages($files)" />
+                    </div>
+                    <div class="col-lg-5">
+                        <input ng-disabled="!imagesrc.length" type="button" class="btn btn-primary" ng-click="loadup()" value="Upload" />
+                        <input ng-disabled="!imagesrc.length" type="button" class="btn btn-primary" ng-click="reset()" value="Cancel" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

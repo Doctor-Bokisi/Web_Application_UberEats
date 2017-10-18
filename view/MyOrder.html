@@ -1,0 +1,55 @@
+﻿
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><font color="black"> <b>UBER</b> </font><font color="Green">EATS </font></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#!Home">Home</a> </li>
+            <li><a href="#!Home"><span class="glyphicon glyphicon-dashboard"></span> DashBoard</a></li>
+        </ul>
+    </div>
+</nav>
+<style>
+    input[type=text] {
+        width: 130px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url('searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+    }
+
+        input[type=text]:focus {
+            width: 100%;
+        }
+</style>
+
+<h2 class="text-center text-danger">Orders</h2>
+<input ng-controller="MyOrderController" type="text" name="search" placeholder="Search.." ng-model="resSearch">
+<table class="table table-hover general-table" cellspacing="40" align="center" style="width:80%" ng-model="resSearch">
+    <thead class="grid-top panel">
+        <tr>
+            <th>Order ID</th>
+            <th>Delivery Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="res in Order_Data | filter : resSearch">
+            <td>{{res.OrderId}}</td>
+            <td>{{res.Delivery_Address}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+

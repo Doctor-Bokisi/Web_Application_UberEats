@@ -1,0 +1,51 @@
+﻿<nav class="navbar navbar-default" ng-app="Signin">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><font color="black"> <b>UBER</b> </font><font color="Green">EATS </font></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#!Home">Home</a> </li>
+            <!--<li><a href="#!Dash"><span class="glyphicon glyphicon-dashboard"></span> DashBoard</a></li>-->
+        </ul>
+    </div>
+</nav>
+
+
+<body ng-controller="ProfileController" ng-app="SignIn">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div>
+                <form>
+                    <div class="form-group">
+                        <label for="inputEmail">User Identification</label>
+                        <input type="text" value="Id" ng-model="Id" class="form-control input-lg" placeholder="Id" disabled />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">First Name</label>
+                        <input type="text" ng-model="firstName" class="form-control input-lg" placeholder="First Name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Last Name</label>
+                        <input type="text" ng-model="lastName" class="form-control input-lg" placeholder="Last Name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Mobile</label>
+                        <input type="text" ng-model="mobile" class="form-control input-lg" placeholder="mobile" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" ng-model="email" class="form-control input-lg" placeholder="Email" disabled />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Password</label>
+                        <input type="password" ng-model="password" class="form-control input-lg" placeholder="Password" disabled />
+                    </div>
+                </form>
+            </div>
+            <br>
+            <div>
+                <button ng-click="EditUser()" class="btn btn-info form-control input-lg">Update</button>
+            </div>
+        </div>
+    </div>
+</body>

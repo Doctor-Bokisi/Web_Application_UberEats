@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><font color="black"> <b>UBER</b> </font><font color="Green">EATS </font></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#!Home">Home</a> </li>
+            <!--<li><a href="#!Dash"><span class="glyphicon glyphicon-dashboard"></span> DashBoard</a></li>-->
+        </ul>
+    </div>
+</nav>
+<h2 class="text-center text-danger">Registration</h2>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div ng-controller="UserController">
+            <form>
+                <div class="form-group">
+                    <label for="inputFirstname">firstname</label>
+                    <input type="text" ng-model="firstName" class="form-control input-lg" placeholder="firstname" />
+                </div>
+                <div class="form-group">
+                    <label for="inputLastname">lastname</label>
+                    <input type="text" ng-model="lastName" class="form-control input-lg" placeholder="lastname" />
+                </div>
+                <div class="form-group">
+                    <label for="inputMobile">mobile</label>
+                    <input type="text" ng-model="mobile" class="form-control input-lg" placeholder="mobile" />
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail">email</label>
+                    <input type="email" ng-model="email" class="form-control input-lg" placeholder="email" />
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" ng-model="password" class="form-control input-lg" placeholder="password" />
+                </div>
+                <br />
+                <div class="input">
+                    <button ng-click="AdUser()" class="btn btn-success form-control input-lg">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

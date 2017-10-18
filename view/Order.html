@@ -1,0 +1,44 @@
+﻿<nav class="navbar navbar-default" ng-app="Signin">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><font color="black"> <b>UBER</b> </font><font color="Green">EATS </font></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#!Home">Home</a> </li>
+            <!--<li><a href="#!Dash"><span class="glyphicon glyphicon-dashboard"></span> DashBoard</a></li>-->
+        </ul>
+    </div>
+</nav>
+
+<h2 class="text-center text-danger"> Details</h2>
+<body ng-controller="OrderController">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <div>
+                <form>   
+                    <div class="form-group">
+                        <label for="inputPassword">First Name</label>
+                        <input type="text" ng-model="firstName" class="form-control input-lg" placeholder="First Name" disabled />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Mobile</label>
+                        <input type="text" ng-model="mobile" class="form-control input-lg" placeholder="Mobile" disabled />
+                    </div>                                                       
+                  
+                    <div class="form-group">
+                        <label for="inputPassword">Total Price</label>
+                        <input type="text" ng-model="totalPrice" class="form-control input-lg" placeholder="Total" disabled />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Delivery Address</label>
+                        <input type="text" ng-model="Delivery_Address" class="form-control input-lg" placeholder="Address" />
+                    </div>
+                </form>
+            </div>
+            <br>
+            <div>
+                <button ng-click="AdOrder()" class="btn btn-info form-control input-lg">Order</button>
+            </div>
+        </div>
+    </div>
+</body>

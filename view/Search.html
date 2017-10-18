@@ -1,0 +1,67 @@
+﻿
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><font color="black"> <b>UBER</b> </font><font color="Green">EATS </font></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#!Home">Home</a> </li>
+            <!--<li><a href="#!Search"><span class="glyphicon glyphicon-search"></span> Search</a></li>-->
+        </ul>
+    </div>
+</nav>
+
+<style>
+           input[type=text] {
+               width: 130px;
+               box-sizing: border-box;
+               border: 2px solid #ccc;
+               border-radius: 4px;
+               font-size: 16px;
+               background-color: white;
+               background-image: url('searchicon.png');
+               background-position: 10px 10px;
+               background-repeat: no-repeat;
+               padding: 12px 20px 12px 40px;
+               -webkit-transition: width 0.4s ease-in-out;
+               transition: width 0.4s ease-in-out;
+           }
+
+               input[type=text]:focus {
+                   width: 100%;
+               }
+       </style>
+
+<h2 class="text-center text-danger">Search Restaurants</h2>
+<input ng-controller="SearchController" type="text" name="search" placeholder="Search.." ng-model="searchRest">
+
+<table class="table table-hover general-table" cellspacing="40" align="center" style="width:80%">
+    <thead class="grid-top panel">
+        <tr>
+            <th>Res Logo</th>
+            <th>Restaurant Name</th>
+            <th>Restaurant Location</th>
+            <th>Restaurant Type</th>
+            <th>View Restaurant</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="res in Restaurant|filter : searchRest">
+            <td><img style="width:100px; height:100px" ng-src="{{'data:image/jpg;base64,'+res.Image}}" class="img-rounded" /></td>
+            <td>{{res.res_Name}}</td>
+            <td>{{res.res_Location}}</td>
+            <td>{{res.Cuisne_Type}}</td>
+            <td>
+                <a href="#!McD" class="btn btn-sm btn-primary">
+                    View Restaurant
+                    <i class="fa fa-shopping-cart"></i>
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+

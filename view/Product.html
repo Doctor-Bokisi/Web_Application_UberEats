@@ -1,0 +1,37 @@
+﻿<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><font color="black"> <b>UBER</b> </font><font color="Green">EATS </font></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#!Home">Home</a> </li>
+            <li><a href="#!Dash"><span class="glyphicon glyphicon-dashboard"></span> DashBoard</a></li>
+        </ul>
+    </div>
+</nav>
+    <h2 class="text-center text-danger">Add Product</h2>
+<div class="row" ng-controller="ProdController">
+        <div class="col-md-6 col-md-offset-3">
+            <div>
+                <form>
+                    <div class="form-group">
+                        <label for="inputEmail">Product Name</label>
+                        <input type="text" ng-model="Prod_Name" class="form-control input-lg" placeholder="Name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Product Price</label>
+                        <input type="text" ng-model="Prod_Price" class="form-control input-lg" placeholder="Price" />
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Product Description</label>
+                        <input type="text" ng-model="Prod_Description" class="form-control input-lg" placeholder="Description" />
+                    </div>                    
+                    <br>
+                    <div>
+                        <button ng-click="AddProd()" class="btn btn-success form-control input-lg">Add Product</button>
+                        <!--<input type="submit" value="submit" class="btn btn-success" ng-click="loginForm()" />-->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>

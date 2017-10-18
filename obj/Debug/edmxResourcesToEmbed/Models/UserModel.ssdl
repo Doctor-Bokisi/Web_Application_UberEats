@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CustomerDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admin_Table">
+    <Key>
+      <PropertyRef Name="AminId" />
+    </Key>
+    <Property Name="AminId" Type="int" Nullable="false" />
+    <Property Name="AdminUsername" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AdminPassword" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="firstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="lastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="mobile" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="OrderId" />
+    </Key>
+    <Property Name="OrderId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="totalPrice" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Delivery_Address" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Order_Product">
+    <Key>
+      <PropertyRef Name="PId" />
+    </Key>
+    <Property Name="PId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="prod_id" Type="int" Nullable="false" />
+    <Property Name="orderId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Payment">
+    <Key>
+      <PropertyRef Name="PId" />
+    </Key>
+    <Property Name="PId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="card_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Card_Number" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CVV" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Prod_Id" />
+    </Key>
+    <Property Name="Prod_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Prod_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prod_Description" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Prod_Price" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Restaurant">
+    <Key>
+      <PropertyRef Name="ResId" />
+    </Key>
+    <Property Name="ResId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="res_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="res_Location" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Cuisne_Type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email_Address" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Manger_Name" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tblRes">
+    <Key>
+      <PropertyRef Name="PicId" />
+    </Key>
+    <Property Name="PicId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="varbinary(max)" />
+    <Property Name="RestId" Type="int" />
+  </EntityType>
+  <Function Name="getAllOrders" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetProductInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="GetResInfo" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Procedure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="CustomerDbModelStoreContainer">
+    <EntitySet Name="Admin_Table" EntityType="Self.Admin_Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Order_Product" EntityType="Self.Order_Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Payment" EntityType="Self.Payment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Restaurant" EntityType="Self.Restaurant" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tblRes" EntityType="Self.tblRes" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

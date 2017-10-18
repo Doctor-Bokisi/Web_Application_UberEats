@@ -1,0 +1,37 @@
+﻿
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><font color="black"> <b>UBER</b> </font><font color="Green">EATS </font></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#!Home">Home</a> </li>
+            <li><a href="#!Dash"><span class="glyphicon glyphicon-dashboard"></span> DashBoard</a></li>
+        </ul>
+    </div>
+</nav>
+
+<h2 class="text-center text-danger">Restaurants</h2>
+
+<table class="table table-hover general-table" cellspacing="40" align="center" style="width:80%" ng-controller="RestDataController" ng-model="resSearch">
+    <thead class="grid-top panel">
+        <tr>
+            <th>Restaurant Name</th>
+            <th>Restaurant Location</th>
+            <th>Restaurant Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="res in res_Data | filter : resSearch">
+            <td>{{res.res_Name}}</td>
+            <td>{{res.res_Location}}</td>
+            <td>{{res.Cuisne_Type}}</td>    
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+

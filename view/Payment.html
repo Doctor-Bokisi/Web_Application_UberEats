@@ -1,0 +1,132 @@
+﻿<style>
+
+    @import url(https://fonts.googleapis.com/css?family=Ubuntu);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Exo);
+@import url(https://fonts.googleapis.com/css?family=Play);
+body{
+  margin: 0;
+  padding: 0;
+  background:  #fff url('http://p1.pichost.me/i/19/1423500.jpg') no-repeat center center fixed;
+ background-size:cover;
+  height:100vh;
+}
+form{
+  background-color: rgba(0, 0,0, 0.5);
+  padding: 4em 4em 2em;
+  max-width: 400px;
+  margin: 20px auto ;
+  box-shadow: 0 0 1em #222;
+  border-radius: 5px;
+}
+input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none
+}
+input[type="password"],
+input[type="text"]{
+  padding:20px;
+  margin:2%;
+  border-radius:10px;
+  background:rgba(0,0,0,0.7)
+}
+input[type="text"],
+input[type="password"]{
+  outline:none;
+}
+input[type="text"]:focus,
+input[type="password"]:focus{
+  background:rgba(255,255,255,1);
+}
+input::-webkit-input-placeholder{ 
+font-family: 'Play', sans-serif;
+letter-spacing:3px;
+text-align:center;
+font-weight:bolder;
+}
+
+.form{
+  width:50%;
+  margin:auto;
+  font-weight:bolder;
+}
+.form button{
+  float:right;
+  margin-right:10px;
+  background:none;
+  color:#fff;
+  border:none;
+  cursor:pointer;
+  font-family: 'Exo', sans-serif;
+  margin-top:2%;
+  font-size:1.75em;
+  outline:none;
+}
+
+form button:hover{
+  color:#FF8C00;
+}
+input[type="submit"] {
+ width:150px;
+ padding:.8em;
+ background:none;
+ border:none;
+ border-radius:5px;
+ font-size:1em;
+ color:#fff;
+ margin-left:30%;
+ border:1px solid #fff;
+  cursor:pointer;
+}
+input[type="submit"]:hover{
+  background:rgba(255,255,255,0.7);
+  color:#222;
+}
+
+.group:after{
+  display:table;
+  content:" ";
+  clear:both;
+}
+</style>
+<link href="../Content/bootstrap.css" rel="stylesheet" />
+<link href="../Content/bootstrap-theme.css" rel="stylesheet" />
+
+<nav class="navbar navbar-default" ng-app="Signin" >
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><font color="black"> <b>UBER</b> </font><font color="Green">EATS </font></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#!Home">Home</a> </li>
+            <!--<li><a href="#!Dash"><span class="glyphicon glyphicon-dashboard"></span> DashBoard</a></li>-->
+        </ul>
+    </div>
+</nav>
+
+<meta name="viewport" content="width=device-width">
+<h2 class="text-center text-danger">Checkout</h2>
+<!--registration-->
+<form id="registration" ng-controller="PaymentController">
+    <p>
+        <input type="text" ng-model="card_Name"  name="Card Name" id="password" placeholder="Card Name">
+    </p>
+    <p>
+        <input type="text" ng-model="Card_Number" name="Card Name" placeholder="Card Number" maxlength="12" min="12">
+    </p>
+    <p>
+        <input type="text" ng-model="CVV" name="CVV" placeholder="CVV" maxlength="3" min="3">
+    </p>
+    
+    <div class="input">
+        <button ng-click="AdPay()" class="btn btn-success form-control input-lg">Pay</button>
+    </div>
+</form>
+<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+
+
+
+

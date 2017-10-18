@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CustomerDbModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Admin_Table">
+    <Key>
+      <PropertyRef Name="AminId" />
+    </Key>
+    <Property Name="AminId" Type="Int32" Nullable="false" />
+    <Property Name="AdminUsername" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AdminPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="CustomerDbEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Admin_Table" EntityType="Self.Admin_Table" />
+  </EntityContainer>
+</Schema>

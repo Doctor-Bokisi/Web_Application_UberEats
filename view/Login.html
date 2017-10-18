@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><font color="black"> <b>UBER</b> </font><font color="Green">EATS </font></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="#!Home">Home</a> </li>
+            <!--<li><a href="#!Dash"><span class="glyphicon glyphicon-dashboard"></span> DashBoard</a></li-->
+        </ul>
+    </div>
+</nav>
+
+<h2 class="text-center text-danger">Sign In</h2>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div ng-controller="LoginController">
+            <form>
+                <div class="form-group">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" ng-model="email" class="form-control input-lg" placeholder="Email" />
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" ng-model="password" class="form-control input-lg" placeholder="Password" />
+                </div>
+                <br>
+                <div>
+                    <button ng-click="loginForm()" class="btn btn-success form-control input-lg">SigIn</button>
+                    <!--<input type="submit" value="submit" class="btn btn-success" ng-click="loginForm()" />-->
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

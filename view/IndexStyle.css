@@ -1,0 +1,36 @@
+﻿    html, body{
+  height: 100%;
+}
+body { 
+			background-image: url(https://ih1.redbubble.net/image.344484701.7139/ls,13inch,x999-bg,f8f8f8.2u6.jpg) ;
+			background-position:center;
+			background-repeat:  no-repeat;
+			background-attachment:inherit;
+			background-size:1000px;
+  
+}
+
+div, body{
+  margin: 0;
+  padding: 0;
+  font-family: exo, sans-serif;
+  
+}
+.wrapper {
+  height: 100%; 
+  width: 100%; 
+}
+
+.message {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%; 
+  height:45%;
+  bottom: 0; 
+  display: block;
+  position: absolute;
+  background-color: rgba(0,0,0,0.6);
+  color: #fff;
+  padding: 0.5em;
+}
